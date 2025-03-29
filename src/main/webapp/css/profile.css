@@ -1,0 +1,154 @@
+@import url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/stylesheets/NotoSansKR-Hestia.css);
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(to left, #ffffff, #ffcc80);
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gradient {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, #ff9800, #ffcc80);
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.content {
+  text-align: center;
+}
+
+h2 {
+  color: #fff;
+  font-size: 28px;
+  letter-spacing: 3px;
+  animation: expandTextAnimation 1s linear 2s;
+  opacity: 0;
+}
+
+p {
+  color: #fff;
+  font-size: 18px;
+  margin: 10px 0;
+  opacity: 0;
+  animation: expandText2Animation 1s linear 1.5s forwards;
+}
+
+.icons {
+  margin: 20px 0;
+}
+
+.icons i {
+  font-size: 30px;
+  margin: 0 10px;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.icons i:hover {
+  transform: scale(1.2);
+}
+
+.details {
+  font-size: 16px;
+  color: #fff;
+  font-weight: 300;
+  margin-top: 20px;
+  opacity: 0;
+  animation: expandText3Animation 1s linear 2s forwards;
+}
+
+/* Profile Image Animation */
+.profile-img {
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  width: 120px;
+  height: 120px;
+  margin-left: -200px;
+  border: 5px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px #ccc;
+  box-sizing: border-box;
+  line-height: 120px;
+  text-align: center;
+  animation: rollAnimation 1s linear 0.5s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  margin-right: 20px; /* Adjust this if necessary */
+  align-self: center;
+}
+
+.profile-img img {
+  width: 100%;
+  height: 100%;
+  vertical-align: top;
+  object-fit: cover;
+}
+
+/* Keyframe Animations */
+@keyframes rollAnimation {
+  0% {
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+  }
+  100% {
+    opacity: 1;
+    left: 200px;
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes expandTextAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes expandText2Animation {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes expandText3Animation {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

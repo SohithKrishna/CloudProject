@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300&display=swap');
+
+body {
+  background-color: #ffec40; /* Soft yellow background */
+  background-image: linear-gradient(to right, #ffec40, #ffffff); /* Gradient from yellow to white */
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+}
+
+#main-container {
+  position: absolute;
+  margin: 0 auto;
+  left: calc(50% - 100px);
+  text-align: center;
+}
+
+svg {
+  width: 70px;
+  position: absolute;
+  top: -5px;
+  left: 16px;
+  animation: smile 1.5s ease forwards;
+  transform-origin: 33px 55px;
+}
+
+@keyframes smile {
+  0% {
+    transform: rotate(0deg);
+  }
+  5% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(-25deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+#container {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.smile {
+  fill: none;
+  stroke: #FFFFFF;
+  stroke-width: 6;
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
+}
+
+p {
+  color: #333; /* Dark gray text for contrast */
+  font-family: 'Open Sans', sans-serif;
+  font-size: 35px;
+  opacity: 0;
+  animation: hello 1s ease .5s forwards;
+}
+
+@keyframes hello {
+  0% {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+.eye {
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+.eyeL {
+  animation: eyeL 1.5s ease .1s forwards;
+  transform-origin: -5px -15px;
+}
+
+.eyeR {
+  animation: eyeR 1.5s ease .1s forwards;
+  transform-origin: -5px -15px;
+}
+
+@keyframes eyeL {
+  20% {
+    transform: scale(1) translate(-50%, -50%);
+  }
+  60% {
+    transform: scale(.4) translate(-50%, -50%);
+  }
+  68% {
+    transform: scale(.6, .4) translate(-120%, -50%);
+  }
+  76% {
+    transform: scale(.4) translate(-190%, -50%);
+  }
+  100% {
+    transform: scale(.4) translate(-190%, -50%);
+  }
+}
+
+@keyframes eyeR {
+  20% {
+    transform: scale(1) translate(-50%, -50%);
+  }
+  60% {
+    transform: scale(.4) translate(-50%, -50%);
+  }
+  68% {
+    transform: scale(.6, .4) translate(calc(120% - 30px), -50%);
+  }
+  76% {
+    transform: scale(.4) translate(calc(190% - 30px), -50%);
+  }
+  85% {
+    transform: scale(.4) translate(calc(190% - 30px), -50%);
+  }
+  90% {
+    transform: scale(.7, .2) translate(calc(190% - 55px), -30%);
+  }
+  95% {
+    transform: scale(.7, .2) translate(calc(190% - 55px), -30%);
+  }
+  100% {
+    transform: scale(.4) translate(calc(190% - 30px), -50%);
+  }
+}
